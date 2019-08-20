@@ -1,0 +1,67 @@
+/* Global Styles
+ * - Mobile First Approach
+ * - Local styles will be set with styled-components
+ * ============================================================================*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 14px;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: var(--fullWhite);
+  color: var(--grey1);
+  line-height: 1.6;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* By Element (Alphabetic Order)
+ * ============================================================================*/
+
+a {
+  color: var(--grey1);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+p:last-of-type {
+  margin-bottom: 0rem;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Media Query Medium Sizes
+ * ============================================================================*/
+@media (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* Media Query Big Sizes
+ * ============================================================================*/
+@media (min-width: 1200px) {
+  :root {
+    font-size: 18px;
+  }
+}
