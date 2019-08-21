@@ -1,18 +1,26 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 import Footer from "./Footer"
 import Header from "./Header"
+import PageContainer from "../containers/PageContainer"
 
 import "../../styles/index.css"
 
 const Layout = ({ children }) => (
   <LayoutStyled className="Layout">
     <Header />
-    <main>{children}</main>
+    <main>
+      <PageContainer>{children}</PageContainer>
+    </main>
     <Footer />
   </LayoutStyled>
 )
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 const LayoutStyled = styled.div`
   display: flex;

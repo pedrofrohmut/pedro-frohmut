@@ -1,7 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-const Header = () => <HeaderStyled className="Header">HEADER</HeaderStyled>
+import PageContainer from "../containers/PageContainer"
+
+const Header = () => (
+  <HeaderStyled className="Header">
+    <PageContainer>Pedro Frohmut</PageContainer>
+  </HeaderStyled>
+)
 
 const HeaderStyled = styled.header`
   padding: 0.5rem 0 0.6rem;

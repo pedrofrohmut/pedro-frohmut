@@ -1,9 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
+import PageContainer from "../containers/PageContainer"
+
 const Footer = () => (
   <FooterStyled className="Footer">
-    Created by Pedro Frohmut, &copy; 2019
+    <PageContainer>Created by Pedro Frohmut, &copy; 2019</PageContainer>
   </FooterStyled>
 )
 
