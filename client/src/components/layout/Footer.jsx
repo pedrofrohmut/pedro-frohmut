@@ -5,6 +5,6 @@ const Footer = () => (
   <FooterStyled className="Footer">Footer Styled</FooterStyled>
 )
 
-const FooterStyled = styled.div``
+const FooterStyled = styled.footer``
 
 export default Footer
