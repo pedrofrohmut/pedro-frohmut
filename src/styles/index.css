@@ -28,8 +28,9 @@
   --grey6: #ccc;
   --grey7: #eee;
   --grey8: #f3f3f3;
+  --grey9: #f7f7f7;
 
-  --boxShadow: 0px 0px 6px rgba(200, 200, 200, 0.4);
+  --boxShadow: 0px 0px 7px rgba(200, 200, 200, 0.65);
 }
 
 html {
@@ -70,11 +71,7 @@ img {
 
 p {
   text-align: justify;
-  margin-bottom: 1rem;
-}
-
-p:first-of-type {
-  margin-top: 0rem;
+  margin: 0 0 1rem 0;
 }
 
 p:last-of-type {

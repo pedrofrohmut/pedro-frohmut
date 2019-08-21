@@ -28,6 +28,7 @@ const LayoutStyled = styled.div`
   min-height: 100vh;
 
   main {
+    margin-top: 5rem;
     margin-bottom: 3.5rem;
   }
 

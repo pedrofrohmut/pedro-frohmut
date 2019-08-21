@@ -1,13 +1,29 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql, useStaticQuery } from "gatsby"
 
 import PageContainer from "../containers/PageContainer"
 
-const Footer = () => (
-  <FooterStyled className="Footer">
-    <PageContainer>Created by Pedro Frohmut, &copy; 2019</PageContainer>
-  </FooterStyled>
-)
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          author
+        }
+      }
+    }
+  `)
+  const { author } = data.site.siteMetadata
+  return (
+    <FooterStyled className="Footer">
+      <PageContainer>
+        {`Created by ${author}, `}
+        &copy; 2019
+      </PageContainer>
+    </FooterStyled>
+  )
+}
 
 const FooterStyled = styled.footer`
   padding: 0.5rem 0 0.6rem;
