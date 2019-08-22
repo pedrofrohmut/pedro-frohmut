@@ -118,7 +118,6 @@ const HeaderStyled = styled.header`
   a {
     color: var(--grey3);
     outline: none;
-    margin-right: 2em;
     position: relative;
 
     &:hover,
@@ -145,8 +144,49 @@ const HeaderStyled = styled.header`
   }
 
   @media (min-width: 768px) {
-    nav a::after {
+    .nav-toggle-label {
       display: none;
+    }
+
+    nav {
+      position: unset;
+      text-align: center;
+      opacity: 1;
+      transform: unset;
+      width: auto;
+    }
+
+    nav ul {
+      border: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      border: 0;
+      padding: 0;
+      margin: 0 0.9rem;
+    }
+
+    nav li:hover,
+    nav li:focus {
+      background: transparent;
+    }
+
+    nav a {
+      display: inline;
+      margin: 0;
+      padding: 0.3rem 0.3rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    a {
+      opacity: 0.6;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 `
