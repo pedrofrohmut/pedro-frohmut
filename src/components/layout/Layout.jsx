@@ -11,9 +11,7 @@ import "../../styles/index.css"
 const Layout = ({ children }) => (
   <LayoutStyled className="Layout">
     <Header />
-    <main>
-      <PageContainer>{children}</PageContainer>
-    </main>
+    <main>{children}</main>
     <Footer />
   </LayoutStyled>
 )

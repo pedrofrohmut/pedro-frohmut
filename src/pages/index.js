@@ -3,9 +3,29 @@ import styled from "styled-components"
 
 import Layout from "../components/layout/Layout"
 
+import HeroImg from "../images/hero.jpg"
+
 const IndexPage = () => (
   <Layout>
     <IndexPageStyled className="IndexPage">
+      <section className="hero">
+        <div className="image-wrapper">
+          <img src={HeroImg} alt="HeroImage" />
+        </div>
+        <h1>
+          <div className="title">
+            Hi I'm
+            {" "}
+            <strong>Pedro Frohmut</strong>
+            {" "}
+a Full-Stack Developer
+          </div>
+          <div className="subtitle small">
+            Developing with ReactJs and AspNetCore to make great websites
+          </div>
+        </h1>
+      </section>
+
       <p>
         Ipsum tenetur fugit natus impedit rerum Ipsam necessitatibus laudantium
         corporis ab ab Iusto neque quam ut unde sapiente Sapiente impedit
@@ -205,6 +225,61 @@ const IndexPage = () => (
   </Layout>
 )
 
-const IndexPageStyled = styled.div``
+const IndexPageStyled = styled.div`
+  margin-top: -1.3rem;
+
+  section.hero {
+    position: relative;
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      top: 42%;
+      transform: translateY(-50%);
+      color: var(--fullWhite);
+      font-weight: 400;
+      text-align: center;
+      margin: 0;
+      padding: 1.3rem;
+      background: var(--dimmedBlack6);
+    }
+
+    .title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+    }
+
+    img {
+      max-width: 100vw;
+      width: auto;
+      opacity: 0.92;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    section.hero {
+      h1 {
+        padding: 4rem 0;
+      }
+
+      .title {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.4rem;
+      }
+    }
+  }
+`
 
 export default IndexPage
