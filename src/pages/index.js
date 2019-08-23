@@ -3,21 +3,19 @@ import styled from "styled-components"
 
 import Layout from "../components/layout/Layout"
 
-import HeroImg from "../images/hero.jpg"
+import HeroAlta from "../images/hero-alta-1080.jpg"
 
 const IndexPage = () => (
   <Layout>
     <IndexPageStyled className="IndexPage">
       <section className="hero">
         <div className="image-wrapper">
-          <img src={HeroImg} alt="HeroImage" />
+          <img src={HeroAlta} alt="HeroImage" />
         </div>
         <h1>
           <div className="title">
             Hi I'm
-            {" "}
             <strong>Pedro Frohmut</strong>
-            {" "}
 a Full-Stack Developer
           </div>
           <div className="subtitle small">
@@ -25,7 +23,6 @@ a Full-Stack Developer
           </div>
         </h1>
       </section>
-
       <p>
         Ipsum tenetur fugit natus impedit rerum Ipsam necessitatibus laudantium
         corporis ab ab Iusto neque quam ut unde sapiente Sapiente impedit
@@ -266,6 +263,8 @@ const IndexPageStyled = styled.div`
 
   @media (min-width: 1200px) {
     section.hero {
+      margin: 0 auto;
+
       h1 {
         padding: 4rem 0;
       }
