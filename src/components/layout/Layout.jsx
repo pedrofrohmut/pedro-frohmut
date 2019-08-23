@@ -7,18 +7,6 @@ import Header from "./Header"
 
 import "../../styles/index.css"
 
-const Layout = ({ children }) => (
-  <LayoutStyled className="Layout">
-    <Header />
-    <main>{children}</main>
-    <Footer />
-  </LayoutStyled>
-)
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
-
 const LayoutStyled = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,5 +21,17 @@ const LayoutStyled = styled.div`
     margin-top: auto;
   }
 `
+
+const Layout = ({ children }) => (
+  <LayoutStyled className="Layout">
+    <Header />
+    <main>{children}</main>
+    <Footer />
+  </LayoutStyled>
+)
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+}
 
 export default Layout

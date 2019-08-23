@@ -4,6 +4,14 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Container from "../containers/Container"
 
+const FooterStyled = styled.footer`
+  padding: 0.5rem 0 0.6rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--grey4);
+  box-shadow: var(--boxShadow);
+`
+
 const Footer = () => {
   const data = useStaticQuery(graphql`
     {
@@ -24,13 +32,5 @@ const Footer = () => {
     </FooterStyled>
   )
 }
-
-const FooterStyled = styled.footer`
-  padding: 0.5rem 0 0.6rem;
-  font-size: 0.8rem;
-  text-align: center;
-  color: var(--grey4);
-  box-shadow: var(--boxShadow);
-`
 
 export default Footer

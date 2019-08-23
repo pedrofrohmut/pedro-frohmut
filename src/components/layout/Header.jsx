@@ -4,51 +4,6 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Container from "../containers/Container"
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  const { title } = data.site.siteMetadata
-  return (
-    <HeaderStyled className="Header">
-      <Container className="Container">
-        <Link to="/" className="logo">
-          {title}
-        </Link>
-
-        <label htmlFor="nav-toggle" className="nav-toggle-label">
-          navigation
-        </label>
-
-        <input id="nav-toggle" type="checkbox" className="nav-toggle" />
-
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </Container>
-    </HeaderStyled>
-  )
-}
-
 const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
@@ -190,5 +145,47 @@ const HeaderStyled = styled.header`
     }
   }
 `
+
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  const { title } = data.site.siteMetadata
+  return (
+    <HeaderStyled className="Header">
+      <Container className="Container">
+        <Link to="/" className="logo">
+          {title}
+        </Link>
+        <label htmlFor="nav-toggle" className="nav-toggle-label">
+          navigation
+        </label>
+        <input id="nav-toggle" type="checkbox" className="nav-toggle" />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </nav>
+      </Container>
+    </HeaderStyled>
+  )
+}
 
 export default Header
