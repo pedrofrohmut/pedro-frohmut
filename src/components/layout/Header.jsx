@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import PageContainer from "../containers/PageContainer"
+import Container from "../containers/Container"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -17,7 +17,7 @@ const Header = () => {
   const { title } = data.site.siteMetadata
   return (
     <HeaderStyled className="Header">
-      <PageContainer className="PageContainer">
+      <Container className="Container">
         <Link to="/" className="logo">
           {title}
         </Link>
@@ -44,7 +44,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-      </PageContainer>
+      </Container>
     </HeaderStyled>
   )
 }
@@ -62,7 +62,7 @@ const HeaderStyled = styled.header`
   font-weight: 400;
   box-shadow: var(--boxShadow);
 
-  .PageContainer {
+  .Container {
     display: flex;
     align-items: center;
     justify-content: space-between;

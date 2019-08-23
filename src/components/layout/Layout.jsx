@@ -4,7 +4,6 @@ import PropTypes from "prop-types"
 
 import Footer from "./Footer"
 import Header from "./Header"
-import PageContainer from "../containers/PageContainer"
 
 import "../../styles/index.css"
 

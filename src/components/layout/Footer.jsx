@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 
-import PageContainer from "../containers/PageContainer"
+import Container from "../containers/Container"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -17,10 +17,10 @@ const Footer = () => {
   const { author } = data.site.siteMetadata
   return (
     <FooterStyled className="Footer">
-      <PageContainer>
+      <Container>
         {`Created by ${author}, `}
         &copy; 2019
-      </PageContainer>
+      </Container>
     </FooterStyled>
   )
 }
