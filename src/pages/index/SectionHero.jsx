@@ -56,7 +56,7 @@ const SectionHeroStyled = styled.section`
 `
 
 const SectionHero = ({ heroUrl, heroTitle }) => (
-  <SectionHeroStyled className="hero">
+  <SectionHeroStyled className="SectionHero">
     <div className="image-wrapper">
       <img src={heroUrl} alt={heroTitle} />
     </div>
@@ -68,7 +68,7 @@ const SectionHero = ({ heroUrl, heroTitle }) => (
         {" "}
 a Full-Stack Developer
       </div>
-      <div className="subtitle small">
+      <div className="subtitle">
         Developing with ReactJs and AspNetCore to make great websites
       </div>
     </h1>
