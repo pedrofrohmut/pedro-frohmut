@@ -65,11 +65,10 @@ const SectionHero = ({ heroUrl, heroTitle }) => (
         Hi I'm
         {" "}
         <strong>Pedro Frohmut</strong>
-        {" "}
-a Full-Stack Developer
+, a Full-Stack Web Developer
       </div>
       <div className="subtitle">
-        Developing with ReactJs and AspNetCore to make great websites
+        Making scalable web apps with ReactJS and Asp Net Core
       </div>
     </h1>
   </SectionHeroStyled>

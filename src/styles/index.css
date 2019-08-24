@@ -32,6 +32,11 @@
   --grey8: #f3f3f3;
   --grey9: #f7f7f7;
 
+  --lightBlue: #33adff;
+  --lightGreen: #5cd6d6;
+  --lightOrange: #ff9966;
+  --lightPurple: #aa80ff;
+
   --dimmedBlack2: rgba(0, 0, 0, 0.2);
   --dimmedBlack4: rgba(0, 0, 0, 0.4);
   --dimmedBlack6: rgba(0, 0, 0, 0.6);
@@ -40,6 +45,9 @@
   --dimmedBlack9: rgba(0, 0, 0, 0.9);
 
   --boxShadow: 0px 0px 7px rgba(200, 200, 200, 0.65);
+  --boxShadowCard: 2px 2px 5px rgba(127, 127, 127, 0.4);
+  --boxShadowSmallUnderline: 0 0.15rem 0 -1px #aaa;
+  --boxShadowLightUnderline: 0 0.25em 0 -1px #eee;
 }
 
 body {
