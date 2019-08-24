@@ -63,6 +63,26 @@ const PortfolioCardStyled = styled.div`
     border-radius: 1rem;
     opacity: 0.5;
   }
+
+  @media (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 20rem;
+
+    .wrapper {
+      height: 100%;
+    }
+
+    .description {
+      height: 6rem;
+    }
+
+    .tecnologies {
+      height: 2.5rem;
+    }
+  }
 `
 
 const PortfolioCard = ({
