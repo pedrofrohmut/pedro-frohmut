@@ -110,7 +110,6 @@ const SectionHeroStyled = styled.section`
 
 const SectionHero = ({
   heroUrl,
-  heroTitle,
   perfilTitle,
   perfilUrl,
   reactUrl,
@@ -150,7 +149,6 @@ const SectionHero = ({
 
 SectionHero.propTypes = {
   heroUrl: PropTypes.string.isRequired,
-  heroTitle: PropTypes.string.isRequired,
   perfilTitle: PropTypes.string.isRequired,
   perfilUrl: PropTypes.string.isRequired,
   reactUrl: PropTypes.string.isRequired,

@@ -85,30 +85,33 @@ const PortfolioCardStyled = styled.div`
   }
 `
 
-const PortfolioCard = ({
-  project: {
+const PortfolioCard = ({ project, afterColor }) => {
+  if (!project) return <>loading...</>
+  const {
     title, description, tecnologies, projectLink, githubLink
-  },
-  afterColor
-}) => (
-  <PortfolioCardStyled afterColor={afterColor} className="PortfolioCard">
-    <div className="wrapper">
-      <p className="title">{title}</p>
-      <p className="description">{description}</p>
-      <p className="tecnologies">{tecnologies}</p>
-      <p className="links">
-        <a href={projectLink}>
-          <FontAwesomeIcon icon={faWindowRestore} />
-          <span>Project</span>
-        </a>
-        <a href={githubLink}>
-          <FontAwesomeIcon icon={faGithubSquare} />
-          <span>Github</span>
-        </a>
-      </p>
-    </div>
-  </PortfolioCardStyled>
-)
+  } = project
+  return (
+    <PortfolioCardStyled afterColor={afterColor} className="PortfolioCard">
+      {project && (
+        <div className="wrapper">
+          <p className="title">{title}</p>
+          <p className="description">{description}</p>
+          <p className="tecnologies">{tecnologies}</p>
+          <p className="links">
+            <a href={projectLink}>
+              <FontAwesomeIcon icon={faWindowRestore} />
+              <span>Project</span>
+            </a>
+            <a href={githubLink}>
+              <FontAwesomeIcon icon={faGithubSquare} />
+              <span>Github</span>
+            </a>
+          </p>
+        </div>
+      )}
+    </PortfolioCardStyled>
+  )
+}
 
 PortfolioCard.propTypes = {
   project: PropTypes.shape({

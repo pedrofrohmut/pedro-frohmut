@@ -63,24 +63,26 @@ const SectionPortfolio = ({ projects }) => (
   <SectionPortfolioStyled id="portfolio" className="SectionPortfolio">
     <Container className="container">
       <h1>Know my work</h1>
-      <div className="grid-container">
-        <PortfolioCard
-          afterColor="var(--lightBlue)"
-          project={projects[0].node}
-        />
-        <PortfolioCard
-          afterColor="var(--lightGreen)"
-          project={projects[1].node}
-        />
-        <PortfolioCard
-          afterColor="var(--lightOrange)"
-          project={projects[2].node}
-        />
-        <PortfolioCard
-          afterColor="var(--lightPurple)"
-          project={projects[3].node}
-        />
-      </div>
+      {projects && (
+        <div className="grid-container">
+          <PortfolioCard
+            afterColor="var(--lightBlue)"
+            project={projects[0].node}
+          />
+          <PortfolioCard
+            afterColor="var(--lightGreen)"
+            project={projects[1].node}
+          />
+          <PortfolioCard
+            afterColor="var(--lightOrange)"
+            project={projects[2].node}
+          />
+          <PortfolioCard
+            afterColor="var(--lightPurple)"
+            project={projects[3].node}
+          />
+        </div>
+      )}
     </Container>
   </SectionPortfolioStyled>
 )
