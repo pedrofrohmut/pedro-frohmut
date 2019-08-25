@@ -10,10 +10,27 @@ import SectionPortfolio from "./index/SectionPortfolio"
 
 export const query = graphql`
   {
-    contentfulAsset(title: { eq: "hero-maxima-1080" }) {
-      title
-      file {
-        url
+    allContentfulAsset {
+      edges {
+        node {
+          title
+          file {
+            url
+          }
+        }
+      }
+    }
+
+    allContentfulPortfolioProject(sort: { fields: createdAt }) {
+      edges {
+        node {
+          id
+          title
+          description
+          tecnologies
+          projectLink
+          githubLink
+        }
       }
     }
   }
@@ -24,46 +41,40 @@ const IndexPageStyled = styled.div`
 `
 
 const IndexPage = ({ data }) => {
-  const heroTitle = data.contentfulAsset.title
-  const heroUrl = data.contentfulAsset.file.url
-  // TODO: Add projects to Contentful
-  const projects = [
-    {
-      id: 1,
-      title: "ECommerce",
-      description:
-        "A WebSite that simulates an ecommerce that works as a C# and ReactJS sandbox",
-      tecnologies:
-        "ReactJS, Redux, Thunk, Styled Components, AspNetCore, JWT Authentication, Identity, MailKit, EFCore and Dapper"
-    },
-    {
-      id: 2,
-      title: "Coder Share Blog",
-      description:
-        "A blog where programmers can discuss tecnologies and theories about programming and coding",
-      tecnologies:
-        "ReactTS (TypeScript), Redux, Redux Saga, Styled Components, AspNetCore, Identity, EFCore, JWT Authentication"
-    },
-    {
-      id: 3,
-      title: "Task Manager",
-      description:
-        "A simple and intuitive app to better manage your time with work to be done and goals to be achived",
-      tecnologies:
-        "ReactJS, Redux, Thunk, Tailwind CSS(Functional CSS), Spring, Spring Secutiry, Hibernate"
-    },
-    {
-      id: 4,
-      title: "Weeklyr",
-      description:
-        "A personal side project that aims to Plan My Week. Creates an abstraction where I can plan the next week to increase the number and quality of activities in my weekly routine",
-      tecnologies: "VueJS and Firebase"
-    }
-  ]
+  const heroEdge = data.allContentfulAsset.edges.find(
+    (edge) => edge.node.title === "hero-alta-1080"
+  )
+  const heroTitle = heroEdge.node.title
+  const heroUrl = heroEdge.node.file.url
+  const perfilEdge = data.allContentfulAsset.edges.find(
+    (edge) => edge.node.title === "foto-perfil-alta"
+  )
+  const perfilTitle = perfilEdge.node.title
+  const perfilUrl = perfilEdge.node.file.url
+  const reactEdge = data.allContentfulAsset.edges.find(
+    (edge) => edge.node.title === "react"
+  )
+  const reactTitle = reactEdge.node.title
+  const reactUrl = reactEdge.node.file.url
+  const dotnetcoreEdge = data.allContentfulAsset.edges.find(
+    (edge) => edge.node.title === "dotnetcore"
+  )
+  const dotnetcoreTitle = dotnetcoreEdge.node.title
+  const dotnetcoreUrl = dotnetcoreEdge.node.file.url
+  const projects = data.allContentfulPortfolioProject.edges
   return (
     <Layout>
       <IndexPageStyled className="IndexPage">
-        <SectionHero heroUrl={heroUrl} heroTitle={heroTitle} />
+        <SectionHero
+          heroUrl={heroUrl}
+          heroTitle={heroTitle}
+          perfilUrl={perfilUrl}
+          perfilTitle={perfilTitle}
+          reactUrl={reactUrl}
+          reactTitle={reactTitle}
+          dotnetcoreUrl={dotnetcoreUrl}
+          dotnetcoreTitle={dotnetcoreTitle}
+        />
         <SectionPortfolio projects={projects} />
       </IndexPageStyled>
     </Layout>
@@ -72,11 +83,32 @@ const IndexPage = ({ data }) => {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    contentfulAsset: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      file: PropTypes.shape({
-        url: PropTypes.string.isRequired
-      }).isRequired
+    allContentfulAsset: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            file: PropTypes.shape({
+              url: PropTypes.string.isRequired
+            }).isRequired
+          }).isRequired
+        }).isRequired
+      ).isRequired
+    }).isRequired,
+
+    allContentfulPortfolioProject: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            description: PropTypes.string.isRequired,
+            tecnologies: PropTypes.string.isRequired,
+            projectLink: PropTypes.string.isRequired,
+            githubLink: PropTypes.string.isRequired
+          }).isRequired
+        }).isRequired
+      ).isRequired
     }).isRequired
   }).isRequired
 }

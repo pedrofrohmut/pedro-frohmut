@@ -2,81 +2,104 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-const SectionHeroStyled = styled.section`
-  position: relative;
+import Container from "../../components/containers/Container"
 
-  h1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    top: 42%;
-    transform: translateY(-50%);
-    color: var(--fullWhite);
-    font-weight: 400;
-    text-align: center;
-    margin: 0;
-    padding: 1.3rem;
-    background: var(--dimmedBlack6);
+const SectionHeroStyled = styled.section`
+  clear: both;
+  position: relative;
+  padding: 2rem 0;
+
+  .perfil-wrapper {
+    border: 1px dashed red;
+  }
+
+  .perfil-card {
+    background-color: var(--fullWhite);
   }
 
   .title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--grey2);
+  }
+
+  .title::first-letter {
+    font-size: 2rem;
   }
 
   .subtitle {
-    font-size: 0.95rem;
+    font-size: 1.15rem;
+    color: var(--grey4);
+    margin-bottom: 2rem;
   }
 
-  img {
-    max-width: 100vw;
-    width: auto;
-    opacity: 0.92;
+  .logos {
+    text-align: right;
+  }
+
+  .logo {
+    max-height: 13vw;
+    padding-right: 4vw;
+    display: inline;
+    opacity: 0.9;
+  }
+
+  .perfil-image {
+    max-width: 38vw;
+    position: relative;
+    top: -3.5rem;
+    opacity: 0.9;
   }
 
   @media (min-width: 1200px) {
-    margin: 0 auto;
-
-    h1 {
-      padding: 4rem 0;
-    }
-
-    .title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .subtitle {
-      font-size: 1.4rem;
-    }
   }
 `
 
-const SectionHero = ({ heroUrl, heroTitle }) => (
+const SectionHero = ({
+  heroUrl,
+  heroTitle,
+  perfilTitle,
+  perfilUrl,
+  reactUrl,
+  reactTitle,
+  dotnetcoreUrl,
+  dotnetcoreTitle
+}) => (
   <SectionHeroStyled className="SectionHero">
-    <div className="image-wrapper">
-      <img src={heroUrl} alt={heroTitle} />
-    </div>
-    <h1>
-      <div className="title">
-        Hi I'm
-        {" "}
-        <strong>Pedro Frohmut</strong>
-, a Full-Stack Web Developer
+    <Container>
+      <div className="perfil-card">
+        <div className="title">
+          Hi I'm
+          {" "}
+          <strong>Pedro frohmut</strong>
+          {" "}
+A Full-Stack developer
+        </div>
+        <div className="subtitle">
+          Making scalable web apps with ReactJS and AspNetCore
+        </div>
+        <div className="logos">
+          <img className="react-logo logo" src={reactUrl} alt={reactTitle} />
+          <img
+            className="aspnetcore-logo logo"
+            src={dotnetcoreUrl}
+            alt={dotnetcoreTitle}
+          />
+        </div>
       </div>
-      <div className="subtitle">
-        Making scalable web apps with ReactJS and Asp Net Core
-      </div>
-    </h1>
+      <img className="perfil-image" src={perfilUrl} alt={perfilTitle} />
+    </Container>
   </SectionHeroStyled>
 )
 
 SectionHero.propTypes = {
   heroUrl: PropTypes.string.isRequired,
-  heroTitle: PropTypes.string.isRequired
+  heroTitle: PropTypes.string.isRequired,
+  perfilTitle: PropTypes.string.isRequired,
+  perfilUrl: PropTypes.string.isRequired,
+  reactUrl: PropTypes.string.isRequired,
+  reactTitle: PropTypes.string.isRequired,
+  dotnetcoreUrl: PropTypes.string.isRequired,
+  dotnetcoreTitle: PropTypes.string.isRequired
 }
 
 export default SectionHero

@@ -86,7 +86,9 @@ const PortfolioCardStyled = styled.div`
 `
 
 const PortfolioCard = ({
-  project: { title, description, tecnologies },
+  project: {
+    title, description, tecnologies, projectLink, githubLink
+  },
   afterColor
 }) => (
   <PortfolioCardStyled afterColor={afterColor} className="PortfolioCard">
@@ -95,11 +97,11 @@ const PortfolioCard = ({
       <p className="description">{description}</p>
       <p className="tecnologies">{tecnologies}</p>
       <p className="links">
-        <a href="#">
+        <a href={projectLink}>
           <FontAwesomeIcon icon={faWindowRestore} />
           <span>Project</span>
         </a>
-        <a href="#">
+        <a href={githubLink}>
           <FontAwesomeIcon icon={faGithubSquare} />
           <span>Github</span>
         </a>
@@ -110,9 +112,12 @@ const PortfolioCard = ({
 
 PortfolioCard.propTypes = {
   project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    tecnologies: PropTypes.string.isRequired
+    tecnologies: PropTypes.string.isRequired,
+    projectLink: PropTypes.string.isRequired,
+    githubLink: PropTypes.string.isRequired
   }).isRequired,
   afterColor: PropTypes.string
 }

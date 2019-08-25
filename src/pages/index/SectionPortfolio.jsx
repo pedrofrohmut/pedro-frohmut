@@ -11,13 +11,11 @@ const SectionPortfolioStyled = styled.section`
   padding: 1rem 0;
 
   .container {
-    border-top: 6px solid var(--grey8);
-    border-bottom: 6px solid var(--grey8);
     border-radius: 0.5rem;
   }
 
   h1 {
-    font-size: 2.6rem;
+    font-size: 1.9rem;
     text-align: center;
     color: var(--grey5);
     font-weight: 400;
@@ -29,6 +27,11 @@ const SectionPortfolioStyled = styled.section`
   }
 
   @media (min-width: 768px) {
+    .container {
+      border-top: 6px solid var(--grey8);
+      border-bottom: 6px solid var(--grey8);
+    }
+
     .PortfolioCard:nth-child(odd) {
       margin-right: 30%;
     }
@@ -61,10 +64,22 @@ const SectionPortfolio = ({ projects }) => (
     <Container className="container">
       <h1>Know my work</h1>
       <div className="grid-container">
-        <PortfolioCard afterColor="var(--lightBlue)" project={projects[0]} />
-        <PortfolioCard afterColor="var(--lightGreen)" project={projects[1]} />
-        <PortfolioCard afterColor="var(--lightOrange)" project={projects[2]} />
-        <PortfolioCard afterColor="var(--lightPurple)" project={projects[3]} />
+        <PortfolioCard
+          afterColor="var(--lightBlue)"
+          project={projects[0].node}
+        />
+        <PortfolioCard
+          afterColor="var(--lightGreen)"
+          project={projects[1].node}
+        />
+        <PortfolioCard
+          afterColor="var(--lightOrange)"
+          project={projects[2].node}
+        />
+        <PortfolioCard
+          afterColor="var(--lightPurple)"
+          project={projects[3].node}
+        />
       </div>
     </Container>
   </SectionPortfolioStyled>
@@ -73,9 +88,14 @@ const SectionPortfolio = ({ projects }) => (
 SectionPortfolio.propTypes = {
   projects: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      tecnologies: PropTypes.string.isRequired
+      node: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        tecnologies: PropTypes.string.isRequired,
+        projectLink: PropTypes.string.isRequired,
+        githubLink: PropTypes.string.isRequired
+      }).isRequired
     }).isRequired
   ).isRequired
 }
