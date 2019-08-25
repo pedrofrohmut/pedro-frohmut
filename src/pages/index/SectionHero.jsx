@@ -9,12 +9,11 @@ const SectionHeroStyled = styled.section`
   position: relative;
   padding: 2rem 0;
 
-  .perfil-wrapper {
-    border: 1px dashed red;
+  .wrapper {
+    background-color: var(--fullWhite);
   }
 
   .perfil-card {
-    background-color: var(--fullWhite);
   }
 
   .title {
@@ -90,6 +89,22 @@ const SectionHeroStyled = styled.section`
   }
 
   @media (min-width: 1200px) {
+    background-image: url(${(props) => props.heroUrl});
+    height: calc(100vh - 50px);
+
+    .container {
+      max-width: 100%;
+      padding: 0;
+      background-color: rgba(255, 255, 255, 0.87);
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .wrapper {
+      max-width: 980px;
+      background-color: transparent;
+    }
   }
 `
 
@@ -103,8 +118,8 @@ const SectionHero = ({
   dotnetcoreUrl,
   dotnetcoreTitle
 }) => (
-  <SectionHeroStyled className="SectionHero">
-    <Container>
+  <SectionHeroStyled heroUrl={heroUrl} className="SectionHero">
+    <Container className="container">
       <div className="wrapper">
         <div className="perfil-card">
           <div className="title">

@@ -37,7 +37,7 @@ export const query = graphql`
 `
 
 const IndexPageStyled = styled.div`
-  margin-top: -1.3rem;
+  margin-top: -1.8rem;
 `
 
 const IndexPage = ({ data }) => {
@@ -52,12 +52,12 @@ const IndexPage = ({ data }) => {
   const perfilTitle = perfilEdge.node.title
   const perfilUrl = perfilEdge.node.file.url
   const reactEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "react"
+    (edge) => edge.node.title === "react-icon"
   )
   const reactTitle = reactEdge.node.title
   const reactUrl = reactEdge.node.file.url
   const dotnetcoreEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "dotnetcore"
+    (edge) => edge.node.title === "dotnetcore-icon"
   )
   const dotnetcoreTitle = dotnetcoreEdge.node.title
   const dotnetcoreUrl = dotnetcoreEdge.node.file.url

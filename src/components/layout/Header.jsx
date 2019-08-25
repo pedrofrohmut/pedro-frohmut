@@ -160,9 +160,11 @@ const Header = () => {
   return (
     <HeaderStyled className="Header">
       <Container className="Container">
+        {/*
         <Link to="/" className="logo">
           {title}
         </Link>
+        */}
         <label htmlFor="nav-toggle" className="nav-toggle-label">
           navigation
         </label>
