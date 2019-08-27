@@ -37,7 +37,8 @@ const SectionHeroStyled = styled.section`
   }
 
   .logo {
-    max-height: 13vw;
+    height: 13vw;
+    max-height: 50px;
     padding-right: 4vw;
     display: inline;
     opacity: 0.9;
@@ -95,7 +96,7 @@ const SectionHeroStyled = styled.section`
     .container {
       max-width: 100%;
       padding: 0;
-      background-color: rgba(255, 255, 255, 0.87);
+      background-color: #121212d3;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -104,6 +105,18 @@ const SectionHeroStyled = styled.section`
     .wrapper {
       max-width: 980px;
       background-color: transparent;
+    }
+
+    .title {
+      color: var(--fullWhite);
+    }
+
+    .subtitle {
+      color: var(--grey5);
+    }
+
+    .logo {
+      max-height: 62px;
     }
   }
 `

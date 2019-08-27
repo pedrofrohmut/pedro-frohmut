@@ -52,12 +52,12 @@ const IndexPage = ({ data }) => {
   const perfilTitle = perfilEdge.node.title
   const perfilUrl = perfilEdge.node.file.url
   const reactEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "react-icon"
+    (edge) => edge.node.title === "react-200"
   )
   const reactTitle = reactEdge.node.title
   const reactUrl = reactEdge.node.file.url
   const dotnetcoreEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "dotnetcore-icon"
+    (edge) => edge.node.title === "dotnetcore-200"
   )
   const dotnetcoreTitle = dotnetcoreEdge.node.title
   const dotnetcoreUrl = dotnetcoreEdge.node.file.url
