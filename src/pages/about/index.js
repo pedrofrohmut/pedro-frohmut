@@ -53,7 +53,29 @@ const AboutPage = () => (
         <h3>Experience:</h3>
         <p>TODO</p>
         <h3>Knowlegde:</h3>
-        <p>TODO</p>
+        <p>
+          <h4>Languages: </h4>
+          <p>
+            Brazilian Portuguese (Native), English (Advanced - hearing and
+            listening)
+          </p>
+          <h4>Web Development: </h4>
+          <p>
+            FrontEnd: React, Redux, Gatsby, JavaScript, HTML, CSS and
+            BootstrapCSS.
+          </p>
+          <p>
+            BackEnd: C#, AspNetCore, EntityFrameworkCore, MySQL, PostgreSQL,
+            WebApi and MVC
+          </p>
+          <h4>Extra knowlegde in web development:</h4>
+          <p>FrontEnd: Sass/Scss, Angular 2+, TypeScript, JQuery.</p>
+          {" "}
+          <p>
+            BackEnd: Java, Maven, SpringBoot, SQLServer, NodeJS (Basic), PHP
+            (vanilla) and Blogger (Google).
+          </p>
+        </p>
         <h3>Goals:</h3>
         <p>TODO</p>
         <h3>Interests:</h3>
