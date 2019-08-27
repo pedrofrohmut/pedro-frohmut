@@ -14,6 +14,7 @@ const HeaderStyled = styled.header`
   font-size: 1rem;
   font-weight: 400;
   background-color: var(--grey1);
+  color: var(--fullWhite);
   background-image: linear-gradient(#00000000, #000000aa);
   box-shadow: var(--boxShadowDark);
 
@@ -42,6 +43,8 @@ const HeaderStyled = styled.header`
     transform: scaleY(0);
     transform-origin: top;
     transition: all 500ms ease-in-out;
+    background-color: var(--grey2);
+    border-bottom: 2px solid var(--grey5);
   }
 
   nav ul {
@@ -52,7 +55,7 @@ const HeaderStyled = styled.header`
   }
 
   nav li {
-    padding: 1rem 2rem;
+    padding: 0.6rem 0rem;
     border-bottom: 2px solid var(--grey5);
   }
 
@@ -69,6 +72,7 @@ const HeaderStyled = styled.header`
     color: var(--grey7);
     outline: none;
     position: relative;
+    padding: 0.3rem 2rem;
 
     &:hover,
     &:focus {
@@ -104,6 +108,8 @@ const HeaderStyled = styled.header`
       opacity: 1;
       transform: unset;
       width: auto;
+      background-color: transparent;
+      border: 0;
     }
 
     nav ul {
