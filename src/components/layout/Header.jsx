@@ -11,20 +11,16 @@ const HeaderStyled = styled.header`
   width: 100%;
   z-index: 999;
   padding: 0.8rem 0;
-  background: var(--fullWhite);
-  color: var(--grey3);
   font-size: 1rem;
   font-weight: 400;
-  box-shadow: var(--boxShadow);
+  background-color: var(--grey1);
+  background-image: linear-gradient(#00000000, #000000aa);
+  box-shadow: var(--boxShadowDark);
 
   .Container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  .logo {
-    font-size: 1.3rem;
   }
 
   .nav-toggle {
@@ -41,7 +37,6 @@ const HeaderStyled = styled.header`
     text-align: left;
     top: 100%;
     left: 0;
-    background-color: var(--fullWhite);
     width: 100%;
     opacity: 0;
     transform: scaleY(0);
@@ -71,7 +66,7 @@ const HeaderStyled = styled.header`
   }
 
   a {
-    color: var(--grey3);
+    color: var(--grey7);
     outline: none;
     position: relative;
 
@@ -160,11 +155,6 @@ const Header = () => {
   return (
     <HeaderStyled className="Header">
       <Container className="Container">
-        {/*
-        <Link to="/" className="logo">
-          {title}
-        </Link>
-        */}
         <label htmlFor="nav-toggle" className="nav-toggle-label">
           navigation
         </label>
