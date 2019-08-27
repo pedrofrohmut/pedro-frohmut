@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "test-build": "env-cmd -f .env gatsby build",
-    "develop": "env-cmd -f .env gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -29,7 +28,7 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "env-cmd": "^9.0.3",
+    "dotenv": "^8.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",

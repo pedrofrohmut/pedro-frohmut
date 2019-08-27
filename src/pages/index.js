@@ -42,7 +42,7 @@ const IndexPageStyled = styled.div`
 
 const IndexPage = ({ data }) => {
   const heroEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "hero-alta-1080"
+    (edge) => edge.node.title === "hero-png8"
   )
   const heroTitle = heroEdge.node.title
   const heroUrl = heroEdge.node.file.url

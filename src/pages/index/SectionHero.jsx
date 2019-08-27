@@ -125,7 +125,7 @@ const SectionHero = ({
             Hi I'm
             {" "}
             <strong>Pedro frohmut</strong>
-            ll-Stack developer
+, a Full-Stack developer
           </div>
           <div className="subtitle">
             Making scalable web apps with ReactJS and AspNetCore. Good looking
