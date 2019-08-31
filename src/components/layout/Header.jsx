@@ -15,7 +15,7 @@ const HeaderStyled = styled.header`
   font-weight: 400;
   background-color: var(--grey1);
   color: var(--fullWhite);
-  background-image: linear-gradient(#00000000, #000000aa);
+  background-image: var(--gradientImageBlack);
   box-shadow: var(--boxShadowDark);
 
   .Container {

@@ -50,8 +50,10 @@ const AboutPage = () => (
           technology that encounter, but accept the ones that aggregate value to
           my products.
         </p>
-        <h3>Experience:</h3>
-        <p>TODO</p>
+        {/*
+          <h3>Experience:</h3>
+          <p>TODO</p>
+          */}
         <h3>Knowlegde:</h3>
         <p>
           <h4>Languages: </h4>
@@ -76,10 +78,12 @@ const AboutPage = () => (
             (vanilla) and Blogger (Google).
           </p>
         </p>
-        <h3>Goals:</h3>
-        <p>TODO</p>
-        <h3>Interests:</h3>
-        <p>TODO</p>
+        {/*
+          <h3>Goals:</h3>
+          <p>TODO</p>
+          <h3>Interests:</h3>
+          <p>TODO</p>
+          */}
       </Container>
     </AboutPageStyled>
   </Layout>

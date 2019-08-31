@@ -8,7 +8,7 @@ import PortfolioCard from "./PortfolioCard"
 
 const SectionPortfolioStyled = styled.section`
   margin: 2rem auto;
-  padding: 1rem 0;
+  padding: 3rem 0 1rem;
 
   .container {
     border-radius: 0.5rem;
@@ -60,7 +60,7 @@ const SectionPortfolioStyled = styled.section`
 `
 
 const SectionPortfolio = ({ projects }) => (
-  <SectionPortfolioStyled id="portfolio" className="SectionPortfolio">
+  <SectionPortfolioStyled id="section-portfolio" className="SectionPortfolio">
     <Container className="container">
       <h1>Know my work</h1>
       {projects && (

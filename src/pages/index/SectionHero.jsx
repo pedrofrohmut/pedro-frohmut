@@ -31,6 +31,19 @@ const SectionHeroStyled = styled.section`
     margin-bottom: 2rem;
   }
 
+  .my-work-link {
+    padding: 0.8em 1.6em;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 2.3rem;
+    color: var(--fullWhite);
+    background-color: var(--grey1);
+    font-weight: 700;
+    outline: none;
+  }
+
   .logos {
     text-align: right;
     padding-right: 5vw;
@@ -78,7 +91,20 @@ const SectionHeroStyled = styled.section`
     }
 
     .subtitle {
-      margin-bottom: 0;
+      margin-bottom: 1.4rem;
+    }
+
+    .my-work-link {
+      position: unset;
+      transform: unset;
+    }
+
+    .logos {
+      display: inline-block;
+      position: relative;
+      top: 1.1rem;
+      padding: 0;
+      margin-left: 3rem;
     }
 
     .perfil-image {
@@ -91,7 +117,7 @@ const SectionHeroStyled = styled.section`
 
   @media (min-width: 1200px) {
     background-image: url(${(props) => props.heroUrl});
-    height: calc(100vh - 50px);
+    height: 100vh;
 
     .container {
       max-width: 100%;
@@ -108,11 +134,24 @@ const SectionHeroStyled = styled.section`
     }
 
     .title {
-      color: var(--fullWhite);
+      color: var(--grey7);
     }
 
     .subtitle {
       color: var(--grey5);
+    }
+
+    .my-work-link {
+      border: 3px solid var(--grey7);
+      color: var(--grey7);
+      background: transparent;
+
+      &:hover,
+      &:focus {
+        background-color: var(--grey7);
+        color: var(--grey1);
+        text-shadow: var(--textShadow);
+      }
     }
 
     .logo {
@@ -130,21 +169,27 @@ const SectionHero = ({
   dotnetcoreUrl,
   dotnetcoreTitle
 }) => (
-  <SectionHeroStyled heroUrl={heroUrl} className="SectionHero">
+  <SectionHeroStyled
+    id="section-hero"
+    heroUrl={heroUrl}
+    className="SectionHero"
+  >
     <Container className="container">
       <div className="wrapper">
         <div className="perfil-card">
           <div className="title">
             Hi I'm
-            {" "}
-            <strong>Pedro frohmut</strong>
+            <strong> Pedro frohmut</strong>
 , a Full-Stack developer
           </div>
           <div className="subtitle">
             Making scalable web apps with ReactJS and AspNetCore. Good looking
-            and grow-frendly user interfaces as front end with a cross-platform
-            and high-performance backend
+            and grow-frendly user interfaces with a cross-platform and
+            high-performance backend
           </div>
+          <a className="my-work-link" href="#section-portfolio">
+            See My Work
+          </a>
           <div className="logos">
             <img className="react-logo logo" src={reactUrl} alt={reactTitle} />
             <img

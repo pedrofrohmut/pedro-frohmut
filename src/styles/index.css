@@ -22,6 +22,7 @@
   --fullWhite: #fff;
   --fullBlack: #000;
 
+  --grey0: #121212;
   --grey1: #222;
   --grey2: #444;
   --grey3: #666;
@@ -37,6 +38,7 @@
   --lightOrange: #ff9966;
   --lightPurple: #aa80ff;
 
+  --dimmedWhite2: rgba(255, 255, 255, 0.2);
   --dimmedBlack2: rgba(0, 0, 0, 0.2);
   --dimmedBlack4: rgba(0, 0, 0, 0.4);
   --dimmedBlack6: rgba(0, 0, 0, 0.6);
@@ -44,11 +46,15 @@
   --dimmedBlack8: rgba(0, 0, 0, 0.8);
   --dimmedBlack9: rgba(0, 0, 0, 0.9);
 
+  --gradientImageBlack: linear-gradient(#00000000, #000000aa);
+
   --boxShadow: 0px 0px 7px rgba(200, 200, 200, 0.65);
   --boxShadowDark: 0px 0px 7px rgba(0, 0, 0, 1);
   --boxShadowCard: 2px 2px 5px rgba(127, 127, 127, 0.4);
   --boxShadowSmallUnderline: 0 0.15rem 0 -1px #aaa;
   --boxShadowLightUnderline: 0 0.25em 0 -1px #eee;
+
+  --textShadow: 2px 2px 5px var(--grey4);
 }
 
 body {
