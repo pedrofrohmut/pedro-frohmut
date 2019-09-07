@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Container from "../containers/Container"
 
@@ -148,16 +148,6 @@ const HeaderStyled = styled.header`
 `
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-    {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-  const { title } = data.site.siteMetadata
   return (
     <HeaderStyled className="Header">
       <Container className="Container">

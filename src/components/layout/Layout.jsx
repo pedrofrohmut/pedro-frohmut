@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
 
-import Footer from "./Footer"
+import SEO from "./SEO"
 import Header from "./Header"
+import Footer from "./Footer"
 
 import "../../styles/index.css"
 
@@ -24,6 +25,7 @@ const LayoutStyled = styled.div`
 
 const Layout = ({ children }) => (
   <LayoutStyled className="Layout">
+    <SEO />
     <Header />
     <main>{children}</main>
     <Footer />

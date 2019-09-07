@@ -47,17 +47,17 @@ const IndexPage = ({ data }) => {
   const heroTitle = heroEdge.node.title
   const heroUrl = heroEdge.node.file.url
   const perfilEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "foto-perfil-alta"
+    (edge) => edge.node.title === "foto-perfil220"
   )
   const perfilTitle = perfilEdge.node.title
   const perfilUrl = perfilEdge.node.file.url
   const reactEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "react-200"
+    (edge) => edge.node.title === "react62"
   )
   const reactTitle = reactEdge.node.title
   const reactUrl = reactEdge.node.file.url
   const dotnetcoreEdge = data.allContentfulAsset.edges.find(
-    (edge) => edge.node.title === "dotnetcore-200"
+    (edge) => edge.node.title === "dotnetcore62"
   )
   const dotnetcoreTitle = dotnetcoreEdge.node.title
   const dotnetcoreUrl = dotnetcoreEdge.node.file.url
